@@ -15,11 +15,11 @@
  */
 
 /*
- * Public API Surface of sample-plugin
+ * Public API Surface of haal-centraal-auth
  */
 
-export * from "./lib/plugins/sample-plugin/models";
-export * from "./lib/plugins/sample-plugin/sample-plugin-module";
-export * from "./lib/plugins/sample-plugin/sample-plugin.specification";
-export * from "./lib/plugins/sample-plugin/components/sample-plugin-configuration/sample-plugin-configuration.component";
-export * from "./lib/plugins/sample-plugin/components/sample-action-configuration/sample-action-configuration.component";
+export * from "./lib/plugins/haal-centraal-auth/models";
+export * from "./lib/plugins/haal-centraal-auth/haal-centraal-auth-module";
+export * from "./lib/plugins/haal-centraal-auth/haal-centraal-auth.specification";
+export * from "./lib/plugins/haal-centraal-auth/components/haal-centraal-auth-configuration/haal-centraal-auth-configuration.component";
+export * from "./lib/plugins/haal-centraal-auth/components/sample-action-configuration/sample-action-configuration.component";
