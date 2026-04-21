@@ -26,17 +26,17 @@ dockerCompose {
 }
 
 dependencies {
-    implementation("com.ritense.valtimo:plugin")
-    implementation("com.ritense.valtimoplugins:object-management:$objectManagementPluginVersion")
+    compileOnly("com.ritense.valtimo:plugin")
+    compileOnly("com.ritense.valtimoplugins:object-management:$objectManagementPluginVersion")
 
-    implementation("io.github.microutils:kotlin-logging:3.0.5")
+    compileOnly("io.github.microutils:kotlin-logging:3.0.5")
 
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    compileOnly("org.springframework.boot:spring-boot-starter-data-jpa")
 
     // Netty and WebClient
     implementation("io.projectreactor.netty:reactor-netty-core:$reactorNettyVersion")
     implementation("io.projectreactor.netty:reactor-netty-http:$reactorNettyVersion")
-    implementation("org.springframework:spring-webflux:$springWebfluxVersion")
+    compileOnly("org.springframework:spring-webflux:$springWebfluxVersion")
 
     // Testing
     testImplementation("com.ritense.valtimo:local-resource")
