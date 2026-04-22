@@ -15,6 +15,7 @@
  *
  */
 
+val kotlinLoggingVersion: String by project
 val mockitoKotlinVersion: String by project
 val objectManagementPluginVersion: String by project
 val reactorNettyVersion: String by project
@@ -29,7 +30,7 @@ dependencies {
     compileOnly("com.ritense.valtimo:plugin")
     compileOnly("com.ritense.valtimoplugins:object-management:$objectManagementPluginVersion")
 
-    compileOnly("io.github.microutils:kotlin-logging:3.0.5")
+    compileOnly("io.github.oshai:kotlin-logging-jvm:$kotlinLoggingVersion")
 
     compileOnly("org.springframework.boot:spring-boot-starter-data-jpa")
 
