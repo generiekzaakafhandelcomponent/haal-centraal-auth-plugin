@@ -21,10 +21,7 @@ import com.ritense.plugin.PluginFactory
 import com.ritense.plugin.service.PluginService
 
 class HaalCentraalAuthPluginFactory(
-    pluginService: PluginService
+    pluginService: PluginService,
 ) : PluginFactory<HaalCentraalAuthPlugin>(pluginService) {
-
-    override fun create(): HaalCentraalAuthPlugin {
-        return HaalCentraalAuthPlugin()
-    }
+    override fun create(): HaalCentraalAuthPlugin = HaalCentraalAuthPlugin()
 }

@@ -25,12 +25,8 @@ import org.springframework.context.annotation.Bean
 
 @AutoConfiguration
 class HaalCentraalAuthPluginAutoconfiguration {
-
     @Bean
     @ConditionalOnMissingBean(HaalCentraalAuthPluginFactory::class)
-    fun haalCentraalAuthPluginFactory(
-        pluginService: PluginService
-    ): HaalCentraalAuthPluginFactory {
-        return HaalCentraalAuthPluginFactory(pluginService)
-    }
+    fun haalCentraalAuthPluginFactory(pluginService: PluginService): HaalCentraalAuthPluginFactory =
+        HaalCentraalAuthPluginFactory(pluginService)
 }
