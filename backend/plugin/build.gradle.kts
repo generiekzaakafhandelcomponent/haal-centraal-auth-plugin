@@ -17,18 +17,21 @@
 
 val kotlinLoggingVersion: String by project
 val mockitoKotlinVersion: String by project
-val objectManagementPluginVersion: String by project
 val reactorNettyVersion: String by project
 val springWebfluxVersion: String by project
 
 dockerCompose {
     setProjectName("HaalCentraalAuth")
     isRequiredBy(project.tasks.integrationTesting)
+
+    tasks.integrationTesting {
+        useComposeFiles.addAll("$rootDir/docker-resources/docker-compose-base-test.yml")
+    }
 }
 
 dependencies {
     compileOnly("com.ritense.valtimo:plugin")
-    compileOnly("com.ritense.valtimoplugins:object-management:$objectManagementPluginVersion")
+    compileOnly("com.ritense.valtimo:object-management")
 
     compileOnly("io.github.oshai:kotlin-logging-jvm:$kotlinLoggingVersion")
 
@@ -40,17 +43,18 @@ dependencies {
     compileOnly("org.springframework:spring-webflux:$springWebfluxVersion")
 
     // Testing
-    testImplementation("com.ritense.valtimo:local-resource")
+    testImplementation("com.ritense.valtimo:building-block")
+    testImplementation("com.ritense.valtimo:contract")
+    testImplementation("com.ritense.valtimo:core")
+    testImplementation("com.ritense.valtimo:plugin")
+    testImplementation("com.ritense.valtimo:temporary-resource-storage")
     testImplementation("com.ritense.valtimo:test-utils-common")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-    testImplementation("org.mockito:mockito-core")
-    testImplementation("org.hamcrest:hamcrest-library")
-    testImplementation("org.mockito.kotlin:mockito-kotlin:$mockitoKotlinVersion")
+    testImplementation("org.postgresql:postgresql")
 
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+    testImplementation("com.ritense.valtimo:object-management")
 }
 
 apply(from = "gradle/publishing.gradle")

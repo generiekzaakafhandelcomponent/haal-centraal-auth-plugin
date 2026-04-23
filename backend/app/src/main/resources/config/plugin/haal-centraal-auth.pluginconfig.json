@@ -1,10 +1,10 @@
 [
     {
         "id": "4ac9a49f-4aeb-4f91-86d9-853fd95a1b33",
-        "title": "Haal Centraal Auth plugin (Autodeployed)",
+        "title": "Haal Centraal Auth (Autodeployed)",
         "pluginDefinitionKey": "haal-centraal-auth",
         "properties": {
-            "apiUrl": "https://timeapi.io/api/time/current/zone?timeZone=Europe/Amsterdam"
+            "authenticationSecret": "${HAAL_CENTRAAL_AUTH_SECRET}"
         }
     }
 ]

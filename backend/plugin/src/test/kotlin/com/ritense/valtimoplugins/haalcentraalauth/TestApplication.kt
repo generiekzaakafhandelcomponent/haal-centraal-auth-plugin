@@ -14,12 +14,14 @@
  * limitations under the License.
  */
 
-/*
- * Public API Surface of haal-centraal-auth
- */
+package com.ritense.valtimoplugins.haalcentraalauth
 
-export * from "./lib/plugins/haal-centraal-auth/models";
-export * from "./lib/plugins/haal-centraal-auth/haal-centraal-auth-module";
-export * from "./lib/plugins/haal-centraal-auth/haal-centraal-auth.specification";
-export * from "./lib/plugins/haal-centraal-auth/components/haal-centraal-auth-configuration/haal-centraal-auth-configuration.component";
-export * from "./lib/plugins/haal-centraal-auth/components/sample-action-configuration/sample-action-configuration.component";
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
+
+@SpringBootApplication
+class TestApplication
+
+fun main(args: Array<String>) {
+    runApplication<TestApplication>(*args)
+}
