@@ -22,9 +22,9 @@ val springWebfluxVersion: String by project
 
 dockerCompose {
     setProjectName("HaalCentraalAuth")
-    isRequiredBy(project.tasks.integrationTesting)
+    isRequiredBy(project.tasks.test)
 
-    tasks.integrationTesting {
+    tasks.test {
         useComposeFiles.addAll("$rootDir/docker-resources/docker-compose-base-test.yml")
     }
 }
