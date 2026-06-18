@@ -3,7 +3,7 @@
     "version": 1,
     "backend": [
         {
-            "import": "com.ritense.valtimoplugins:haal-centraal-auth"
+            "import": "com.ritense.valtimoplugins:haal-centraal-authentication"
         }
     ],
     "frontend": {
