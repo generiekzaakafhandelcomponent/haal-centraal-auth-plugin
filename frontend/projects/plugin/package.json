@@ -1,6 +1,6 @@
 {
   "name": "@valtimo-plugins/haal-centraal-auth",
-  "version": "0.14",
+  "version": "0.15.0",
   "peerDependencies": {
     "@angular/common": "19.2.20",
     "@angular/core": "19.2.20"
