@@ -2,6 +2,10 @@
 
 Overzicht van wijzigingen per versie van de Haal Centraal Auth-plugin.
 
+## 0.15.1
+
+Ondersteuning voor Valtimo 13.48.0.
+
 ## 0.15.0
 
 De frontend van de plugin wordt weer gebouwd en gepubliceerd. De `tsconfig`-verwijzingen van het
